@@ -47,8 +47,10 @@ char* GenerationParLongueurMin(int longueurMin) {
 
 int main() {
     int l;
+    do{
     printf("valeur min :");
     scanf("%d",&l);
+    }while(l<0);
     char *c = GenerationParLongueurMin(l);
     printf("%s\n", c);
 
