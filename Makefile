@@ -1,5 +1,8 @@
 all: algo1.c pile.c 
-	gcc -g algo1.c pile.c -o test1
-	gcc -g algo2.c pile.c -o test2
+	gcc -g algo1.c pile.c -o algo1
+	gcc -g algo2.c pile.c -o algo2
+	gcc -g algo3.c pile.c -o algo3
+	gcc -g test.c pile.c -o test
+
 clean:
-	rm -f test1 test2
+	rm -f algo1 algo2 algo3 test

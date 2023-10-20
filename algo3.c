@@ -20,11 +20,9 @@ char* GenerationParLongueurMin(int longueurMin) {
                 p = empiler(c, p); 
                 break;
             case 1:
-                if (longueurActuelle > 0 && !est_pile_vide(p) && sommet(p) == '(') {
                     c = ')';
                     resultat[longueurActuelle++] = c;
-                        p = depiler(p); 
-                }
+                    p = depiler(p); 
                 break;
             case 2:
                 c = 'A' + (rand() % 26);
@@ -35,9 +33,9 @@ char* GenerationParLongueurMin(int longueurMin) {
         }
     }
 
-    while (!est_pile_vide(p)) {
-        resultat[longueurActuelle++] = ')';
-        p = depiler(p);
+    while (est_pile_vide(p)) {
+        resultat[longueurActuelle++] = '(';
+        p = empiler('(', p);
     }
     
     resultat[longueurActuelle] = '\0';
