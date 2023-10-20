@@ -59,10 +59,7 @@ int main() {
     scanf("%d",&l);
     }while(l<0);
     
-    char *c = GenerationAvecNiveauImbrication(l);
-    printf("%s\n", c);
-
-    free(c);
+    printf("%s\n", GenerationAvecNiveauImbrication(l));
 
     return 0;
 }
